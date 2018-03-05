@@ -1,0 +1,6 @@
+<h1>Home Page</h1>
+Welcome
+<p *ngIf="authService.isLoggedIn()">
+  {{authService.currentUser.name }} 
+</p>
+

@@ -1,0 +1,11 @@
+<form>
+<div class="container">
+    Players:
+
+    <div id="players" class="row" *ngFor="let player of players">
+      <div class="card card-block">
+        <h4 class="card-title">player name: <a routerLink="/player/{{player._id}}">{{ player.firstName }} {{ player.lastNameName }} </a></h4>
+      </div>
+    </div>
+  </div>
+</form>

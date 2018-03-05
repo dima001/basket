@@ -1,0 +1,29 @@
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">DB Basketball Manager</a>
+      </div>
+        <div *ngIf="!authService.isLoggedIn();then notLoggedIn else loggedIn"></div>
+          <ng-template #notLoggedIn>
+            <ul class="nav navbar-nav navbar-right">   
+              <li ><a routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li ><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </ng-template>
+          <ng-template #loggedIn>
+              <ul class="nav navbar-nav">
+                <li [routerLinkActive]="['active']"><a routerLink="/home">Home</a></li>
+                <li [routerLinkActive]="['active']"><a routerLink="/team">Team</a></li>
+                <li [routerLinkActive]="['active']"><a routerLink="/players">Players</a></li>
+                <li [routerLinkActive]="['active']"><a routerLink="/games">Games</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">   
+                <li><a (click)="authService.logout()">Logout</a></li>
+              </ul>
+          </ng-template> 
+    </div>
+  </nav>
+  
+  
+  
