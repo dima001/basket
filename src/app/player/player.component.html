@@ -1,17 +1,17 @@
-<div>
-  <h1> first name {{firstName}} {{player.firstName}} {{player.lastNameName}}</h1>  
-  <p>{{player.hight}} {{player.wghite}}</p>
-  <ul *ngIf="player">
-    <li>{{player.defence}}</li>
-    <li>{{player.freeThrow}}</li>
-    <li>{{player.twoThrow}}</li>
-    <li>{{player.thereThrow}}</li>
-    <li>{{player.passing}}</li>
-    <li>{{player.drible}}</li>
-    <li>{{player.speed}}</li>
-    <li>{{player.footwork}}</li>
-    <li>{{player.rebound}}</li>
-    <li>{{player.expirance}}</li>
+<div *ngIf="player"> 
+  <h1 >{{ player.firstName }} {{ player.lastNameName }}</h1>  
+  <p>hight: {{player.hight}} wghite: {{player.wghite}}</p>
+  <ul>
+    <li>defence: {{ player.defence }}</li>
+    <li>freeThrow: {{ player.freeThrow }}</li>
+    <li>twoThrow: {{ player.twoThrow }}</li>
+    <li>thereThrow: {{ player.thereThrow }}</li>
+    <li>passing: {{ player.passing }}</li>
+    <li>drible: {{ player.drible }}</li>
+    <li>speed: {{ player.speed }}</li>
+    <li>footwork: {{ player.footwork }}</li>
+    <li>rebound: {{ player.rebound }}</li>
+    <li>expirance: {{ player.expirance }}</li>
   </ul>
 
 </div>

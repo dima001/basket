@@ -22,6 +22,14 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TeamService } from './services/team.service';
+import { LeagueComponent } from './league/league.component';
+import { TrainingComponent } from './training/training.component';
+import { TacticComponent } from './tactic/tactic.component';
+import { FinanceComponent } from './finance/finance.component';
+import { TrainingService } from './services/training.service';
+import { LeagueService } from './services/league.service';
+import { FinanceService } from './services/finance.service';
+import { TacticService } from './services/tactic.service';
 
 
 // Define the routes
@@ -35,6 +43,10 @@ const ROUTES = [
     { path: 'game', component: GameComponent },
     { path: 'games', component: GamesComponent },
     { path: 'signup', component: SignupComponent },
+    { path: 'training', component: TrainingComponent },
+    { path: 'tactic', component: TacticComponent },
+    { path: 'finance', component: FinanceComponent },
+    { path: 'league', component: LeagueComponent },
   ];
 
 
@@ -51,6 +63,10 @@ const ROUTES = [
     NavBarComponent,
     LoginComponent,
     SignupComponent,
+    LeagueComponent,
+    TrainingComponent,
+    TacticComponent,
+    FinanceComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,8 +79,12 @@ const ROUTES = [
     PlayerService,
     AuthService,
     AuthGuard,
+    TrainingService,
     AdminAuthGuard,
-    TeamService
+    TeamService,
+    LeagueService,
+    FinanceService,
+    TacticService
   ],
   bootstrap: [AppComponent]
 })

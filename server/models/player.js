@@ -91,7 +91,7 @@ PlayerSchema.statics.findPlayerByID = function(id){
     console.log("findPlayerByID id:",id);
     var Player = this;
 
-    return Player.find(ObjectId(id));
+    return Player.findOne(ObjectId(id));
 };
 
 var Player = mongoose.model('Player', PlayerSchema);

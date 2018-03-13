@@ -9,7 +9,7 @@ import { PlayerService } from '../services/player.service';
 })
 export class PlayerComponent implements OnInit {
   player: any;
-  firstName: string;
+  // firstName: string;
 
   constructor(private route: ActivatedRoute, private playerService: PlayerService){}
 
@@ -21,8 +21,9 @@ export class PlayerComponent implements OnInit {
       var playerIdJson = {playerId: params.get('playerid')};
       this.playerService.get(playerIdJson).subscribe(player => {
         console.log(player);
+        // debugger
         this.player = player;
-        this.firstName = player.firstName;
+        // this.firstName = player.firstName;
       });
 
     });

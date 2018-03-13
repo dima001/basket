@@ -1,0 +1,12 @@
+{
+    "income":{
+        "sponser": 500000,
+        "tickets": 250000,
+        "francize": 10000
+    },
+    "outcome":{
+        "playersSalary": 100000,
+        "staffSalary": 50000,
+        "utiles": 2000
+    }
+}

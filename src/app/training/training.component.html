@@ -1,0 +1,34 @@
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+<form>
+  <div class="container">
+    Players:
+    <div id="players" class="row" *ngFor="let player of players">
+      <div class="card card-block">
+        <div class="aaa ccc">
+          <h4 class="card-title">player name: <a routerLink="/player/{{player._id}}">{{ player.firstName }} {{ player.lastNameName }} </a></h4> 
+        </div>
+        <div class="bbb ccc">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Active
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li>Defence</li>
+            <li>Free Throw</li>
+            <li>Two Throw</li>
+            <li>There Throw</li>
+            <li>Passing</li>
+            <li>Dribiling</li>
+            <li>Speed</li>
+            <li>Rebound</li>
+            <li>Footwork</li>
+          </ul>
+        </div>
+         
+      </div>
+    </div>
+  </div>
+</form>

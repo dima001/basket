@@ -3,7 +3,6 @@ const _ = require('lodash');
 const express = require('express');
 const bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb');
-
 const path = require('path');
 const http = require('http');
 
@@ -27,11 +26,6 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set our api routes
 app.use('/api', api);
-
-// Catch all other routes and return the index file
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'));
-});
 
 /**
  * Get port from environment and store in Express.
@@ -83,7 +77,18 @@ app.post('/player', (req, res) => {
   });
 });
 
+app.get('/team', (req, res) => {
+  console.log("get");
+  var body = _.pick(req.body, ['token']);
+  User.findByToken(body.token).then((user) => {
+    Team.findById(user._id).then( (team) => res.status(200).send(team));
+  }).catch((e) => {
+    res.status(400).send();
+  });
+});
+
 app.post('/team', (req, res) => {
+  console.log("post");
   var body = _.pick(req.body, ['token']);
   User.findByToken(body.token).then((user) => {
     Team.findById(user._id).then( (team) => res.send(team));
@@ -149,6 +154,11 @@ app.delete('/users/me/token', authenticate, (req, res) => {
   }, () => {
     res.status(400).send();
   });
+});
+
+// Catch all other routes and return the index file
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 
