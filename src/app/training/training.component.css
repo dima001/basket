@@ -1,0 +1,14 @@
+.name {
+    width: 280px;
+    display: inline-block;
+    color: black;
+}
+
+.training {
+    position: absolute;
+    display: inline-block;
+}
+
+.card{
+    position: relative;
+}

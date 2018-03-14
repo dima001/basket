@@ -10,15 +10,13 @@ export class DataService {
   constructor(private url: string, private http: Http) { }
 
   getAll() {
-    return this.http.get(this.url)
+    return this.http.post(this.url,{}) //should be get function
       .map(response => response.json()
     ).catch(this.handleError);
   }
 
   get(resource) {
-    console.log("get start 1");
-    console.log(resource);
-    return this.http.post(this.url,resource)
+    return this.http.post(this.url,resource) //should be get function
       .map(response => response.json());
   }
 
