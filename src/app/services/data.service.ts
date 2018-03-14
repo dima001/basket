@@ -10,7 +10,7 @@ export class DataService {
   constructor(private url: string, private http: Http) { }
 
   getAll() {
-    return this.http.post(this.url,{})
+    return this.http.get(this.url)
       .map(response => response.json()
     ).catch(this.handleError);
   }

@@ -1,20 +1,20 @@
 {
-    "1":{
+    "first":{
         "teamName" : "Beitar",
         "userId" : "5a9836e319c67fa8ac70070d",
         "points" : "2"
     },
-    "2":{
+    "seconed":{
         "teamName" : "Beitar",
         "userId" : "5a9836e319c67fa8ac70070d",
         "points" : "1"
     },
-    "3":{
+    "threth":{
         "teamName" : "Beitar",
         "userId" : "5a9836e319c67fa8ac70070d",
         "points" : "1"
     },
-    "4":{
+    "fourth":{
         "teamName" : "Beitar",
         "userId" : "5a9836e319c67fa8ac70070d",
         "points" : "0"
