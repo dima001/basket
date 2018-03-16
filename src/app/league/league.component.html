@@ -1,10 +1,19 @@
-<p>
-  league works!
-</p>
-<!-- <table>
-  <tr *ngFor="let team of teams">
-    <td>{{ team }}</td>
+<h1>
+  league table
+</h1>
+<table id="table">
+  <tr>
+    <th>Team</th>
+    <th>Wins</th>
+    <th>Losses</th>
+    <th>Points</th>
   </tr>
-</table> -->
+  <tr *ngFor="let team of teams">
+    <td>{{ team.teamName }}</td>
+    <td>{{ team.wins }}</td>
+    <td>{{ team.losses }}</td>
+    <td>{{ team.points }}</td>
+  </tr>
+</table>
 
 

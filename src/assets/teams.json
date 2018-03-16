@@ -1,22 +1,30 @@
-{
-    "first":{
+[
+    {
         "teamName" : "Beitar",
         "userId" : "5a9836e319c67fa8ac70070d",
-        "points" : "2"
+        "wins" : "2",
+        "losses" : "0",
+        "points" : "4"
     },
-    "seconed":{
-        "teamName" : "Beitar",
+    {
+        "teamName" : "Maccabi",
         "userId" : "5a9836e319c67fa8ac70070d",
+        "wins" : "1",
+        "losses" : "1",
         "points" : "1"
     },
-    "threth":{
-        "teamName" : "Beitar",
+    {
+        "teamName" : "Nazareth Illite",
         "userId" : "5a9836e319c67fa8ac70070d",
+        "wins" : "1",
+        "losses" : "1",
         "points" : "1"
     },
-    "fourth":{
-        "teamName" : "Beitar",
+    {
+        "teamName" : "Haifa",
         "userId" : "5a9836e319c67fa8ac70070d",
+        "wins" : "0",
+        "losses" : "2",
         "points" : "0"
     }
-}
+]

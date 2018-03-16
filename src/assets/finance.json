@@ -1,12 +1,18 @@
-{
-    "income":{
+[
+    {
         "sponser": 500000,
         "tickets": 250000,
-        "francize": 10000
-    },
-    "outcome":{
+        "francize": 10000,
         "playersSalary": 100000,
         "staffSalary": 50000,
         "utiles": 2000
-    }
-}
+    },
+    {
+        "sponser": 400000,
+        "tickets": 150000,
+        "francize": 20000,
+        "playersSalary": 90000,
+        "staffSalary": 45000,
+        "utiles": 1000
+    }   
+]

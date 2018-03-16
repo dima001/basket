@@ -14,9 +14,9 @@ export class LeagueComponent implements OnInit {
   constructor(private route: ActivatedRoute, private leagueService: LeagueService) { }
 
   ngOnInit() {
-    // // Retrieve posts from the API
-    // this.leagueService.getAll().subscribe(teams => {
-    //   this.teams = teams;
-    // });
+    // Retrieve posts from the API
+    this.leagueService.get(5555).subscribe(teams => { // change to user id
+      this.teams = teams;
+    });
   }
 }

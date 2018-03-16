@@ -1,3 +1,28 @@
-<p>
+<h1>
   finance works!
-</p>
+</h1>
+<div id="players" *ngFor="let week of finance">
+    <table id="table">
+      <tr>
+        <th>income</th>
+        <th>outcome</th>
+      </tr>
+      <tr>
+        <td>{{ week.sponser }}</td>
+        <td>{{ week.playersSalary }}</td>
+      </tr>
+      <tr>
+          <td>{{ week.tickets }}</td>
+          <td>{{ week.staffSalary }}</td>
+      </tr>
+      <tr>
+          <td>{{ week.francize }}</td>
+          <td>{{ week.utiles }}</td>
+      </tr>
+      <tr>
+          <td>total:</td>
+          <td>{{ week.utiles }}</td>
+      </tr>
+    </table>
+</div>
+

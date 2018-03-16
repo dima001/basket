@@ -14,10 +14,10 @@ export class FinanceComponent implements OnInit {
   constructor(private route: ActivatedRoute, private financeService: FinanceService) { }
 
   ngOnInit() {
-    // // Retrieve posts from the API
-    // this.financeService.getAll().subscribe(finance => {
-    //   this.finance = finance;
-    // });
+    // Retrieve posts from the API
+    this.financeService.get(555).subscribe(finance => { //change to time/user id
+      this.finance = finance;
+    });
   }
 }
 

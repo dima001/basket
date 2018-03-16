@@ -16,7 +16,7 @@ export class DataService {
   }
 
   get(resource) {
-    return this.http.post(this.url,resource) //should be get function
+    return this.http.get(this.url,resource) //should be get function
       .map(response => response.json());
   }
 
