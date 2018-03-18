@@ -20,13 +20,31 @@ var TeamSchema = new mongoose.Schema({
     
 
 TeamSchema.statics.findById = function(id){
-    console.log("find by id server");
-    console.log(id);
     var Team = this;
 
     return Team.findOne({
         userId: id
     });
+};
+
+TeamSchema.statics.newTeam = function(id){
+    var Team = this;
+
+    var team = Team.findOneAndUpdate({
+        userId:"-1"
+    },{userId: id });
+
+};
+
+
+TeamSchema.statics.createNewTeam = function(){
+    var Team = this;
+
+    return Team.add({
+        teamName:"new Team",
+        userId:"-1"
+    });
+
 };
 
 var Team = mongoose.model('Team', TeamSchema);

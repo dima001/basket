@@ -94,6 +94,30 @@ PlayerSchema.statics.findPlayerByID = function(id){
     return Player.findOne(ObjectId(id));
 };
 
+PlayerSchema.statics.createNewPlayer = function(id){
+    console.log("findPlayerByID id:",id);
+    var Player = this;
+
+    return Player.add({
+    "firstName" : "Dima",
+    "lastNameName" : "Brodski",
+    "age" : Math.floor((Math.random() * 20) + 1),
+    "hight" : Math.floor((Math.random() * 20) + 1),
+    "wghite" : Math.floor((Math.random() * 20) + 1),
+    "defence" : Math.floor((Math.random() * 20) + 1),
+    "drible" : Math.floor((Math.random() * 20) + 1),
+    "freeThrow" : Math.floor((Math.random() * 20) + 1),
+    "twoThrow" : Math.floor((Math.random() * 20) + 1),
+    "thereThrow" : Math.floor((Math.random() * 20) + 1),
+    "passing" : Math.floor((Math.random() * 20) + 1),
+    "speed" : Math.floor((Math.random() * 20) + 1),
+    "footwork" : Math.floor((Math.random() * 20) + 1),
+    "rebound" : Math.floor((Math.random() * 20) + 1),
+    "expirance" : Math.floor((Math.random() * 20) + 1),
+    "teamId" : id
+    });
+};
+
 var Player = mongoose.model('Player', PlayerSchema);
 
 module.exports = {Player};

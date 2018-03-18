@@ -130,6 +130,7 @@ app.post('/users/signup', (req, res) => {
         tokens: {access: "",
                 token: ""}
       });
+      Team.newTeam(newUser.ObjectID());
       newUser.save().then((user) => {
       return user.generateAuthToken().then((token) => {
         res.header('x-auth', token).send(user);
